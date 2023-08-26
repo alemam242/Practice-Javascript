@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with DOM</title>
+</head>
+
+<body>
+    <ol id="MyList"></ol><br><br>
+    <input id="MyInput"><br><br>
+    <Button onclick="AddItem()">Add</Button>
+    <Button onclick="clearItem()">Clear</Button>
+
+
+    <script>
+        function AddItem() {
+            var list = document.getElementById("MyList");
+            var text = document.getElementById("MyInput").value;
+
+            var item = document.createElement("li");
+            item.innerHTML = text;
+
+            list.appendChild(item);
+
+            document.getElementById("MyInput").value = "";
+        }
+        function clearItem() {
+            var list = document.getElementById("MyList");
+
+            while (list.firstChild) {
+                list.removeChild(list.firstChild);
+            }
+        }
+    </script>
+</body>
+
+</html>

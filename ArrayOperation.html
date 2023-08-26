@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <!-- Different Array Methods -->
+    <script>
+        var ar1 = ["a", "b", "c"];
+        var ar2 = ["d", "e", "f"];
+
+        // Marge ar2 to the end of ar1 
+        var ar3 = ar1.concat(ar2);
+        document.write(ar3 + "<br>");
+
+
+        // Create an array from string
+        var string = "Hello JavaScript!";
+        var newArray = Array.from(string);
+        document.write(newArray + "<br>");
+
+
+        // Filter an array based on condition
+        var numArray = [100, 30, 25, 45, 55, 60, 85, 79, 51];
+
+        /**
+        ** Those functions which have not any name called as Anonymous Function
+        */
+        var result = numArray.filter(function (item) {
+            return item > 50;
+        });
+        document.write(result + "<br>");
+
+
+        // Find Method return the first value of the array which fulfill the condition
+        var result = numArray.find(function (value) {
+            return (value > 40 && value < 60);
+        });
+        document.write("Value = " + result + "<br>");
+        /** 
+        FindIndex Method return the index number of the first value of the array which fulfill the condition
+        otherwise it will return -1
+        */
+        var result = numArray.findIndex(function (value) {
+            return (value > 40 && value < 60);
+        });
+        document.write("Index = " + result + "<br>");
+
+
+        // ForEach Method
+        document.write("<br>Using of ForEach Method<br>");
+        numArray.forEach(function (value, index) {
+            document.write(index + " " + value + "<br>");
+        });
+
+
+        //includes method
+        var res = numArray.includes(55);
+        document.write(res + "<br>");
+        var res = numArray.includes(99);
+        document.write(res + "<br>");
+
+        // indexOf method
+        var res = numArray.indexOf(55);
+        document.write(res + "<br>");
+        var res = numArray.indexOf(99);
+        document.write(res + "<br>");
+
+
+        // Push Pop and reverse method
+        var numArray = [100, 30, 25, 45, 55];
+        document.write("Initial Array: " + numArray);
+        numArray.push(99);
+        numArray.push(56);
+        numArray.push(87);
+
+        document.write("<br>After push 3 item in the Array: " + numArray);
+
+        numArray.pop();
+        document.write("<br>After pop an item: " + numArray);
+
+        document.write("<br>After reverse the array: " + numArray.reverse());
+
+
+        // sort and slice(from,to) method
+        var numAr = [30, 25, 45, 120, 55, 60, 85, 79, 51];
+        document.write("<br><br>Initial Array: " + numAr);
+        document.write("<br>After sort in Ascending order: " + numAr.sort());
+        document.write("<br>After sort in Descending order: " + numAr.sort().reverse());
+
+
+        // divide an array
+        var numArray = [30, 25, 45, 120, 55, 60, 85, 79, 51];
+        var res = numArray.slice(1, 4); // slice the array between index(1,4-1)
+        document.write("<br>" + res);
+
+
+        // splice() method
+
+        /**
+         ** splice(index, removeCount, newItem) // For add new item to array
+         ** splice(index, removeCount) // For remove item from array
+        */
+        var newArray = [30, 20, 46, 85, 99, 12];
+        document.write("<br><br>Initial New Array: " + newArray);
+
+        newArray.splice(0, 0, 44);
+        newArray.splice(3, 0, 45);
+        document.write("<br>After insert item in Array using splice: " + newArray);
+
+        newArray.splice(newArray.length - 1, 1);
+        document.write("<br>After remove an item from Array using splice: " + newArray);
+
+    </script>
+</body>
+
+</html>

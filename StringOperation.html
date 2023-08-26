@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operation</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+    <!--  -->
+    <script>
+        var str1 = "Learn JavaScript";
+
+        //charAt(index) method
+        document.write(
+            str1.charAt(6)
+        );
+
+        var str2 = " With Alemam";
+
+        // concat(String) method
+        var str3 = str1.concat(str2);
+        document.write(
+            "<br>" + str3
+        );
+
+        // indexOf(str) method
+        document.write(
+            "<br>" + str1.indexOf("a")
+        );
+
+        // lastIndexOf(str) method
+        document.write(
+            "<br>" + str1.lastIndexOf("a")
+        );
+
+        // replace(prevString,newString) method
+        document.write(
+            "<br>" + str1.replace("Script", "SCRIPT")
+        );
+
+        // substr(fromIndex,howManyCharacter) method
+        document.write(
+            "<br>" + str1.substr(0, 10)
+        );
+
+        // substring(fromIndex,toIndex) method
+        document.write(
+            "<br>" + str1.substring(6, 10)
+        );
+
+        // toLowerCase() method
+        document.write(
+            "<br>" + str1.toLowerCase()
+        );
+
+        // toUpperCase() method
+        document.write(
+            "<br>" + str1.toUpperCase()
+        );
+
+        // trim() method
+        var str = "       Al Emam          ";
+        document.write(
+            "<br>Length of " + str + " before trim: " + str.length
+        );
+
+        str = str.trim();
+        document.write(
+            "<br>Length of " + str + " after trim: " + str.length
+        );
+
+
+
+    </script>
+</body>
+
+</html>

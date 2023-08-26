@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Date</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- Working with date -->
+    <script>
+        var date = new Date();
+
+        document.write(date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear());
+
+        document.write("<br>" + (date.getHours()) + ":" + date.getMinutes() + ":" + date.getSeconds());
+
+        // document.write("<br>" + date.getDay());
+        switch (date.getDay()) {
+            case 0:
+                document.write("<br>Sunday");
+                break;
+            case 1:
+                document.write("<br>Monday");
+                break;
+            case 2:
+                document.write("<br>Tuesday");
+                break;
+            case 3:
+                document.write("<br>Wednesday");
+                break;
+            case 4:
+                document.write("<br>Thursday");
+                break;
+            case 5:
+                document.write("<br>Friday");
+                break;
+            case 6:
+                document.write("<br>Saturday");
+                break;
+            default:
+                document.write("<br>No day");
+        }
+
+    </script>
+</body>
+
+</html>

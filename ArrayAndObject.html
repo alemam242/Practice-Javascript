@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array And Object</title>
+</head>
+
+<body>
+
+
+
+
+    <!-- For in loop -->
+    <script>
+        var arr = ['Honda', 'TVS', 'Apache', 'Suzuki', 'Hero', 'Volvo'];
+
+
+        for (var index in arr) {
+            document.write(arr[index] + '<br>');
+        }
+
+
+        var MyLaptop = {
+            Brand: "Lenovo",
+            Model: "E590",
+            Ram: "16GB",
+            Rom: "1.5TB",
+            isSSD: true,
+            Processor: "core i-5",
+            Generation: "7th Gen"
+        }
+
+        document.write('<br>About My Laptop<br>');
+        for (var key in MyLaptop) {
+            document.write(key + ": " + MyLaptop[key] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

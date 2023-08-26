@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Events</title>
+    <style>
+        .test {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body onload="MyEvent('Loaded success')">
+    <div class="test">
+        <div>
+            <button onclick="MyEvent('Clicked')">On Click</button>
+        </div>
+        <div>
+            <button onmouseover="MyEvent('Mouse Hovered')">Mouse Over</button>
+        </div>
+        <div>
+            <button onmouseout="MyEvent('Mouse Out')">Mouse Out</button>
+        </div>
+        <div>
+            <button onchange="MyEvent('Changed')">On Change</button>
+        </div>
+    </div>
+
+    <div>
+        <input onchange="MyEvent('Text Changed')" type="text"><br>
+        <input onkeydown="MyEvent('Key Down')" type="text"><br>
+        <input onkeyup="MyEvent('Key Up')" type="text"><br>
+        <input onkeypress="MyEvent('Key Pressed')" type="text"><br>
+    </div>
+
+    <!--  -->
+    <script>
+        function MyEvent(msg) {
+            console.log(msg);
+        }
+    </script>
+</body>
+
+</html>

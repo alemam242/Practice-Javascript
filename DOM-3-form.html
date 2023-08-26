@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with DOM</title>
+
+    <style>
+        .my-div {
+            background: #caa5a5;
+            padding: 0px 20px 20px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .div-center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center;">
+        <div class="my-div">
+            <div class="div-center">
+                <h3>Add Two Number</h3>
+            </div>
+
+            <input id="num1"><br><br>
+            <input id="num2"><br><br>
+
+            <div class="div-center">
+                <button onclick="addNumber()">Add</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function addNumber() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+
+
+            var c = parseInt(a) + parseInt(b);
+            if (isNaN(c)) {
+                alert("Enter valid number");
+            }
+            else {
+                alert(c);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

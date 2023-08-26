@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with DOM</title>
+    <style>
+        .test {
+            display: flex;
+            justify-content: space-around;
+            line-height: 100px;
+        }
+
+        button {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p class="msg"></p>
+    </div>
+
+
+    <div class="test">
+        <div>
+            <button onclick="MyFunction('Cookie')">Show Cookie</button>
+        </div>
+        <div>
+            <button onclick="MyFunction('Domain')">Show Domain</button>
+        </div>
+        <div>
+            <button onclick="MyFunction('Date')">Last Modified</button>
+        </div>
+        <div>
+            <button onclick="MyFunction('Title')">Show Title</button>
+        </div>
+        <div>
+            <button onclick="MyFunction('URL')">Show URL</button>
+        </div>
+        <div>
+            <button onclick="MyFunction('Replace')">Replace All</button>
+        </div>
+    </div>
+
+    <div class="test">
+        <div>
+            <button onclick="MyFunction('openTab')">New Tab</button>
+        </div>
+        <div>
+            <button onclick="MyFunction('AddButton')">Add Button</button>
+        </div>
+        <div>
+            <button onclick="MyFunction()">Button Count</button>
+        </div>
+    </div>
+
+    <!--  -->
+    <script>
+        function MyFunction(type) {
+            if (type === 'Cookie') {
+                document.getElementsByClassName('msg')[0].innerHTML = document.cookie;
+            }
+            else if (type === 'Domain') {
+                document.getElementsByClassName('msg')[0].innerHTML = document.domain;
+            }
+            else if (type === 'Date') {
+                document.getElementsByClassName('msg')[0].innerHTML = document.lastModified;
+            }
+            else if (type === 'Title') {
+                document.getElementsByClassName('msg')[0].innerHTML = document.title;
+            }
+            else if (type === 'URL') {
+                document.getElementsByClassName('msg')[0].innerHTML = document.URL;
+            }
+            else if (type === 'AddButton') {
+                // Create element:
+                var newDiv = document.createElement("div");
+                newDiv.innerHTML = "<button>New Button</button>";
+
+                // Append to another element:
+                document.getElementsByClassName("test")[1].appendChild(newDiv);
+            }
+            else if (type === 'Replace') {
+                document.open('text/html', 'replace');
+                document.write('<h2>All Data Are Replaced</h2>');
+                document.close();
+            }
+            else if (type === 'openTab') {
+                var w = window.open();
+                w.document.open();
+                w.document.write('<h2>Welcome to new tab</h2>');
+                w.document.close();
+            }
+            else {
+                var count = document.getElementsByTagName("button").length;
+                alert("Number of button in this page is: " + count);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

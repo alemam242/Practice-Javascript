@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Number Class</title>
+</head>
+
+<body>
+
+
+
+    <!-- Working with Number Class -->
+    <script>
+        var num = 899e5;
+        var num2 = 899e-5;
+
+        // isFinite() method
+        document.write(
+            Number.isFinite(num)
+        );
+
+        // isInteger() method
+        document.write(
+            "<br>" + Number.isInteger(num)
+        );
+
+        // isNaN() method
+        document.write(
+            "<br>" + Number.isNaN(num)
+        );
+
+        // isSafeInteger() method
+        document.write(
+            "<br>" + Number.isSafeInteger(num)
+        );
+
+        // toFixed() method
+        var nm = 9.8564;
+        document.write(
+            "<br>" + nm.toFixed(2)
+        );
+
+        // parseInt() method
+        var nm = 9.8564;
+        document.write(
+            "<br>" + Number.parseInt(nm)
+        );
+
+        // parseFloat() method
+        var nm = 9;
+        document.write(
+            "<br>" + Number.parseFloat(nm)
+        );
+
+        // toString() method
+        var nm = 9;
+        document.write(
+            "<br>" + nm.toString()
+        );
+
+    </script>
+</body>
+
+</html>

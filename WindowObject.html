@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+    <style>
+        .test {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="test">
+        <div>
+            <button onclick="setAlert()">Alert</button>
+        </div>
+        <div>
+            <button onclick="setConfirm()">Confirm</button>
+        </div>
+        <div>
+            <button onclick="setPrompt()">Prompt</button>
+        </div>
+        <div>
+            <button onclick="tabOpen()">Open Tab</button>
+        </div>
+        <div>
+            <button onclick="tabClose()">Close Tab</button>
+        </div>
+    </div>
+
+    <!-- Working with window object -->
+    <script>
+        function setAlert() {
+            alert("Please wait...");
+        }
+        function setConfirm() {
+            var res = confirm("Do you want to exit?");
+            document.write("<br>" + res);
+        }
+        function setPrompt() {
+            var res = prompt("What is you name?");
+            document.write("<br>" + res);
+        }
+        function tabOpen() {
+            open();
+        }
+        function tabClose() {
+            close();
+        }
+
+
+        // TimeOut
+        setTimeout(function () {
+            alert("Timeout");
+        }, 5000);
+    </script>
+</body>
+
+</html>

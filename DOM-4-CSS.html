@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with DOM</title>
+
+    <style>
+        .h2-text {
+            color: rgb(35, 171, 124);
+        }
+
+        .btn-add {
+            background: rgb(35, 171, 124);
+            width: 80px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .btn-rmv {
+            background: rgb(196, 21, 11);
+            width: auto;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="text" class="">Hello, Javascript!</h2>
+    <button onclick="addStyle()" class="">Add Style</button>
+    <button onclick="removeStyle()" class="">Remove Style</button>
+
+
+    <!--  -->
+    <script>
+        var myH2 = document.getElementById("text");
+        var btn = document.getElementsByTagName("button");
+        function addStyle() {
+            myH2.classList.add("h2-text");
+            btn[0].classList.add("btn-add");
+            btn[1].classList.add("btn-rmv");
+        }
+        function removeStyle() {
+            myH2.classList.remove("h2-text");
+            btn[0].classList.remove("btn-add");
+            btn[1].classList.remove("btn-rmv");
+        }
+    </script>
+</body>
+
+</html>

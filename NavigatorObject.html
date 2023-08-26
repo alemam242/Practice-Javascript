@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator Object</title>
+</head>
+
+<body>
+
+    <!-- Navigator object are used for getting information about browser -->
+    <script>
+        var appCodeName = navigator.appCodeName;
+        document.write(appCodeName + "<br>");
+
+        var appName = navigator.appName;
+        document.write(appName + "<br>");
+
+        var appVersion = navigator.appVersion;
+        document.write(appVersion + "<br>");
+
+        var cookieEnabled = navigator.cookieEnabled;
+        document.write(cookieEnabled + "<br>");
+
+        var language = navigator.language;
+        document.write(language + "<br>");
+
+        var userAgent = navigator.userAgent;
+        document.write(userAgent + "<br>");
+
+        var platform = navigator.platform;
+        document.write(platform + "<br>");
+
+        var onLine = navigator.onLine;
+        document.write(onLine + "<br>");
+
+
+        // geolocation 
+        navigator.geolocation.getCurrentPosition(function (position) {
+            let altitude = position.coords.altitude;
+            let latitude = position.coords.latitude;
+            let longitude = position.coords.longitude;
+            let speed = position.coords.speed;
+
+            document.write("Altitude: " + altitude + "<br>");
+            document.write("latitude: " + latitude + "<br>");
+            document.write("longitude: " + longitude + "<br>");
+            document.write("speed: " + speed + "<br>");
+        });
+    </script>
+</body>
+
+</html>

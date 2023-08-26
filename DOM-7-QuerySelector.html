@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="MyId">H2</h2>
+    <h4 class="MyClass">H4</h4>
+    <h6 name="MyName">H6</h6>
+    <p>P</p>
+    <button onclick="changeElement()">Change</button>
+
+    <script>
+        function changeElement() {
+            document.querySelector("#MyId").innerHTML = "H2 Manipulated";
+            document.querySelector(".MyClass").innerHTML = "H4 Manipulated";
+            document.querySelector("h6[name='MyName']").innerHTML = "H6 Manipulated";
+            document.querySelector("p").innerHTML = "p Manipulated";
+        }
+    </script>
+</body>
+
+</html>

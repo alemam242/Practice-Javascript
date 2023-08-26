@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with DOM</title>
+</head>
+
+<body>
+    <h1 id="first-h1">This is H1</h1>
+    <h3 class="header">This is H3</h3>
+    <h5 class="header">This is H5</h5>
+    <input type="text">
+    <button name="submit">Submit</button>
+
+
+
+    <!-- DOM Manipulation -->
+    <script>
+        let myElement = document.getElementById("first-h1");
+        // console.log(myElement);
+        myElement.innerHTML = "H1 Manipulated";
+
+        let MyElements = document.getElementsByClassName("header");
+        // console.log(MyElements);
+        MyElements[1].innerHTML = "H5 Manipulated";
+        MyElements[0].innerHTML = "H3 Manipulated";
+
+        let submitButton = document.getElementsByName("submit");
+        // console.log(submitButton);
+        submitButton[0].innerHTML = "Hacked";
+
+        let element = document.getElementsByTagName("input");
+        // console.log(element);
+
+    </script>
+</body>
+
+
+</html>
