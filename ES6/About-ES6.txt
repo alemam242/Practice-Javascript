@@ -1,0 +1,24 @@
+ES6 means ECMAScript 6 which is a scripting language
+
+/*General Concept*/
+ES6 is a modern update of JavaScript
+Widely knows as JS6
+This is version of JavaScript
+
+/*In Depth Concept*/
+ES6 or ECMAScript 6 is a scripting language
+ECMAScript is generally used for client-side scripting
+Used for writing server applications and services by using Node.js
+
+
+/*Why Should we learn ES6*/
+For React JS
+For React Native
+For Vue JS
+For Electron JS
+Or Any Node.js dependent development 
+
+/*ES6 Data Types*/
+let   => re assignable, not-re declarable
+var   => re assignable, re declarable
+const => not-re assignable, not-re declarable
